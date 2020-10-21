@@ -172,7 +172,7 @@ int main()
         lightingShader.Use();
 
         // Define object color, light color and position, camera matrix and etc.
-        // Referenced from https://www.khronos.org/opengl/wiki/Example_Code
+        // Referenced from https://www.khronos.org/opengl/wiki/Example_Code and "Opengl and github.pdf"
 
         // Set light position
         glm::vec3 lightPosi = lightPos;
