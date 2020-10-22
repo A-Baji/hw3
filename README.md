@@ -26,7 +26,7 @@ The one vertex file works for all four of the fragment files. To switch between 
 
 *Vertex*
 
-In the vertex shader "phong.vs", we calculate the position of the fragment by multiplying the vertex position with model matrix. Then we multiply the normal vector by the inverse of the model matrix to prevent uneven scaling. Then we calculate the new position by multiplying the current projection by the view and then fragment position.
+In the vertex shader "phong.vs", we calculate the position of the fragment by multiplying the vertex position with model matrix. Then we multiply the normal vector by the inverse of the model matrix to prevent uneven scaling. Then we calculate the new position by multiplying the current projection matrix by the view matrix and then by the fragment position.
 
 *Fragment*
 
