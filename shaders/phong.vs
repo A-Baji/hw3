@@ -1,5 +1,4 @@
-// This code was referenced from https://learnopengl.com/code_viewer_gh.php?code=src/2.lighting/2.2.basic_lighting_specular/2.2.basic_lighting.vs
-// and was not written by me.
+// Referenced from https://learnopengl.com/Lighting/Basic-Lighting
 
 #version 330 core
 
