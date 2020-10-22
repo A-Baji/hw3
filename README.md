@@ -1,4 +1,4 @@
-## hw3
+### hw3
 COSC 4370 Homework 3
 
 PSID: 1776794
