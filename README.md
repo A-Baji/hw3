@@ -25,9 +25,11 @@ For the shaders I have five files. One is just the vertex shader, and the other 
 The one vertex file works for all four of the fragment files. To switch between fragment files, change the file name on line 85 of main.cpp.
 
 *Vertex*
+
 In the vertex shader "phong.vs", we calculate the position of the fragment by multiplying the vertex position with model matrix. Then we multiply the normal vector by the inverse of the model matrix to prevent uneven scaling. Then we calculate the new position by multiplying the current projection by the view and then fragment position.
 
 *Fragment*
+
 In "ambient.frag", we calculate the ambient lighting by multiplying an ambient strength value by the lightColor vector. Then we get the resulting lighintg by multiply the ambient lighting by the ObjectColor vector.
 
 In "diffuse.frag", we get the diffused lighting by calculating the dot product between the normal vector and the lightDir vector. Then we get the resulting lighting by multiply the diffused lighting by the ObjectColor vector.
