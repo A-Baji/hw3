@@ -39,9 +39,11 @@ In "specular.frag", we get the specular lighting by first calculating the reflec
 In "phong.frag", we combine all the techniques from the 3 different types of lightings. After calculating the ambient lighting, the diffused lighting, and the specular lighting, we find the sum of all three vectors and then multiply it by the objectColor vector.
 
 **Main**
+
 In "main.cpp", inside the game loop, I had to link the shader files to the main program. To link the fragment shader, we need a light position vector, a camera positionn vector, a light color vector, and an object color vector. After defining all of those, we link it to the fragment shader using glUniform3f. For the location parameter, we use glGetUniformLocation, passing lightingShader.Program and the appropriate vector as parameters. For the last 3 parameters we use the x, y and z of the corresponding vector. 
 
 Then to link the vertex shader we define the model, view, and projection matrices. The model matrix is initialized with 1s. The view matrix is obtained with the GetViewMatrix() function of the camera class. The projection matrix is calculated with the perspective function, using the camera's zoom as the FOV, dividing the width and height to get the aspect ratio, and using a small value for the near plane and a large value for the far plane. These are then linked to the fragment file using glUniformMatrix4fv. We get the location parameter the same way as we did for the fragment shader, using glGetUniformLocation. For the size we use 1, the transpose boolean is false, and we use value_ptr() to get the pointer for the count values of the corresponding matrix.
 
 **Camera**
+
 In "Camera.h", I had to finish the GetViewMatrix. First a direction vector is declared. The x value is calculated by multiplying the cos of the yaw in radians by the cos of the pitch in radians. The y value is calculated by getting the sin of the pitch in radians. The z value is calculated by multiplying the sin of the yaw in radians by the cos of the pitch in radians. The front vector is then defined as the normal of the direction vector. The new front vector is used for the LookAt matrix.
