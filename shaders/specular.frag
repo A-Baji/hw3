@@ -14,7 +14,7 @@ uniform vec3 objectColor;
 
 void main()
 {
-    // specular
+    // Calculate the specular lighting by multiplying the reflection direction by the spec value
     vec3 norm = normalize(Normal);
     vec3 lightDir = normalize(lightPos - FragPos);
     float specularStrength = 0.5;
