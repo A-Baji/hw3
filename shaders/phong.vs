@@ -15,7 +15,7 @@ uniform mat4 projection;
 
 void main()
 {
-    // Calculate fragment position by multiplying vertex position with madel matrix
+    // Calculate fragment position by multiplying vertex position with model matrix
     FragPos = vec3(model * vec4(aPos, 1.0));
     
     // Multiply normal vector by the transpose of the inverse of the model matrix to prevent uneven scaling
