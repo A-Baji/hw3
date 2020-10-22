@@ -13,7 +13,7 @@ uniform vec3 objectColor;
 
 void main()
 {
-    // diffuse 
+    // Calculate the diffused lighting by getting the dot product of the normal and lightDir vectors
     vec3 norm = normalize(Normal);
     vec3 lightDir = normalize(lightPos - FragPos);
     float diff = max(dot(norm, lightDir), 0.0);
