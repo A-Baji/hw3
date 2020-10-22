@@ -9,7 +9,7 @@ uniform vec3 objectColor;
 
 void main()
 {
-    // ambient
+    // Calculate ambient lighting by multiplying the ambient strength by the light color
     float ambientStrength = 0.1;
     vec3 ambient = ambientStrength * lightColor; 
         
